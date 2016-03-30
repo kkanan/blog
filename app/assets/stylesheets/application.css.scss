@@ -167,5 +167,6 @@ input[type="submit"], .button {
   }
 }
 
-@import 'welcome.css.scss';
-@import 'posts_projects.css.scss';
+@import 'welcome';
+@import 'posts_projects';
+@import 'pygments';
