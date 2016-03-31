@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kris Kanan - Designer, Developer + other stuffs</title>
+  <title>Kris Kanan - Creator of Stuff</title>
   <link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -15,6 +15,9 @@
       <%= link_to "Articles", posts_path %>
       <%= link_to "Projects", projects_path %>
       <%= link_to "Contact", new_contact_path %>
+      <% if user_signed_in? %>
+				<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+			<% end %>
     </nav>
   </header>
 
